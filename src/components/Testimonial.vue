@@ -1,91 +1,97 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
 interface Testimonial {
-  id: number
-  name: string
-  username: string
-  avatar: string
-  text: string
-  rating: number
+  id: number;
+  name: string;
+  username: string;
+  avatar: string;
+  text: string;
+  rating: number;
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: 'Faisal Ahmed',
-    username: '@faisalahmed',
+    name: "Faisal Ahmed",
+    username: "@faisalahmed",
     avatar:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150',
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
     text: "Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux.",
     rating: 5,
   },
   {
     id: 2,
-    name: 'Faisal Ahmed',
-    username: '@faisalahmed',
+    name: "Faisal Ahmed",
+    username: "@faisalahmed",
     avatar:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150',
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
     text: "Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux. Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux.",
     rating: 5,
   },
   {
     id: 3,
-    name: 'Faisal Ahmed',
-    username: '@faisalahmed',
+    name: "Faisal Ahmed",
+    username: "@faisalahmed",
     avatar:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150',
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
     text: "Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux.",
     rating: 5,
   },
   {
     id: 4,
-    name: 'Faisal Ahmed',
-    username: '@faisalahmed',
+    name: "Faisal Ahmed",
+    username: "@faisalahmed",
     avatar:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150',
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
     text: "Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux. Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux.",
     rating: 5,
   },
   {
     id: 5,
-    name: 'Faisal Ahmed',
-    username: '@faisalahmed',
+    name: "Faisal Ahmed",
+    username: "@faisalahmed",
     avatar:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150',
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
     text: "Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux.",
     rating: 4,
   },
   {
     id: 6,
-    name: 'Faisal Ahmed',
-    username: '@faisalahmed',
+    name: "Faisal Ahmed",
+    username: "@faisalahmed",
     avatar:
-      'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150',
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
     text: "Les files d'attente ont presque disparu. Les clients commandent plus vite et nous servons mieux.",
     rating: 4,
   },
-]
+];
 
-const currentIndex = ref(0)
+const currentIndex = ref(0);
 
 const nextSlide = () => {
   if (currentIndex.value < testimonials.length - 3) {
-    currentIndex.value++
+    currentIndex.value++;
   }
-}
+};
 
 const prevSlide = () => {
   if (currentIndex.value > 0) {
-    currentIndex.value--
+    currentIndex.value--;
   }
-}
+};
 </script>
 
 <template>
-  <section class="bg-black text-white py-10 md:py-16 px-4 sm:px-6 md:px-12 lg:px-24">
+  <section
+    class="bg-black text-white py-10 md:py-16 px-4 sm:px-6 md:px-12 lg:px-24"
+  >
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-16">Témoignages</h2>
+      <h2
+        class="text-3xl sm:text-4xl md:text-xl lg:text-5xl font-bold mb-8 md:mb-16"
+      >
+        Témoignages
+      </h2>
 
       <div class="relative">
         <div class="overflow-hidden">
@@ -108,11 +114,15 @@ const prevSlide = () => {
                   <h3 class="font-semibold text-white text-sm sm:text-base">
                     {{ testimonial.name }}
                   </h3>
-                  <p class="text-xs sm:text-sm text-gray-400">{{ testimonial.username }}</p>
+                  <p class="text-xs sm:text-sm text-gray-400">
+                    {{ testimonial.username }}
+                  </p>
                 </div>
               </div>
 
-              <p class="text-gray-300 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base">
+              <p
+                class="text-gray-300 mb-3 sm:mb-4 leading-relaxed text-sm sm:text-base"
+              >
                 {{ testimonial.text }}
               </p>
 
@@ -121,7 +131,11 @@ const prevSlide = () => {
                   v-for="i in 5"
                   :key="i"
                   class="w-4 h-4 sm:w-5 sm:h-5"
-                  :class="i <= testimonial.rating ? 'text-yellow-400' : 'text-gray-600'"
+                  :class="
+                    i <= testimonial.rating
+                      ? 'text-yellow-400'
+                      : 'text-gray-600'
+                  "
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >

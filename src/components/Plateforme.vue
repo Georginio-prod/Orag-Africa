@@ -1,15 +1,15 @@
 <template>
   <section
-    class="text-white py-6 sm:py-10 md:py-14 lg:py-16 px-4 sm:px-6 md:px-12 lg:px-20"
+    class="py-6 sm:py-10 md:py-14 lg:py-16 px-4 sm:px-6 md:px-12 lg:px-20"
   >
     <!-- Header -->
     <div class="max-w-7xl mx-auto mb-8 sm:mb-10 md:mb-12">
       <h1
-        class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3"
+        class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3"
       >
         Les Modules de la Plateforme
       </h1>
-      <p class="text-base sm:text-lg text-gray-400 font-semibold">
+      <p class="text-base sm:text-xl text-gray-400 font-semibold">
         Commandes & Gestion de file d'attente
       </p>
     </div>
@@ -27,20 +27,20 @@
             class="bg-black border border-zinc-800 rounded-2xl sm:rounded-3xl p-4 sm:p-5 md:p-6 transition hover:border-zinc-700"
           >
             <h2
-              class="text-xl sm:text-2xl md:text-3xl font-semibold mb-2 sm:mb-3"
+              class="text-white text-xl sm:text-2xl md:text-3xl font-semibold mb-2 sm:mb-3"
             >
               {{ module.title }}
             </h2>
 
-            <p class="text-[#EFFDF5] text-xs sm:text-sm mb-3 sm:mb-4">
+            <p class="text-gray-400 text-xs sm:text-sm lg:text-lg mb-3 sm:mb-4">
               {{ module.description }}
             </p>
 
-            <ul class="space-y-2 sm:space-y-3">
+            <ul class="space-y-2 sm:space-y-3 text-gray-400">
               <li
                 v-for="item in module.items"
                 :key="item"
-                class="flex items-start text-xs sm:text-sm"
+                class="flex items-start text-xs sm:text-sm lg:text-md"
               >
                 <span class="text-gray-400 mr-2 sm:mr-3">•</span>
                 <span>{{ item }}</span>

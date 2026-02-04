@@ -29,9 +29,13 @@ const profileSolutions: ProfileSolution[] = [
 <template>
   <div class="text-white py-16 px-8 relative overflow-hidden">
     <div class="max-w-7xl mx-auto relative">
-      <h1 class="text-5xl font-bold mb-16">Solutions par profil</h1>
+      <h1 class="text-3xl sm:text-4xl md:text-xl lg:text-5xl font-bold mb-16">
+        Solutions par profil
+      </h1>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center z-10">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 lg:gap-32 gap-10 items-center z-10"
+      >
         <div class="bg-[#FC0A02] rounded-4xl">
           <img
             src="/public/Rectangle 4221.png"

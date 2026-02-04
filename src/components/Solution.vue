@@ -9,11 +9,13 @@
     <div class="w-full mx-auto">
       <!-- Header -->
       <div class="mb-8 sm:mb-12 md:mb-16">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+        <h1
+          class="text-3xl sm:text-4xl md:text-xl lg:text-5xl font-bold text-white mb-4"
+        >
           Nos Solutions
         </h1>
         <p
-          class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-2xl max-w-2xl font-semibold"
+          class="text-gray-400 text-base sm:text-lg md:text-xl lg:text-xl max-w-2xl font-semibold"
         >
           OrgaAfrica regroupe tout ce dont un restaurant a besoin dans un
           système unique et connecté.
