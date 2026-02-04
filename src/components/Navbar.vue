@@ -1,13 +1,31 @@
 <template>
+  <!-- Barre de progression de scroll - Améliorée pour mobile -->
+  <div
+    class="fixed top-0 left-0 w-full h-1 sm:h-1 z-[110] bg-gray-200/30"
+    :style="{
+      pointerEvents: 'none',
+      touchAction: 'none',
+    }"
+  >
+    <div
+      class="h-full transition-all duration-150 ease-out"
+      :style="{
+        width: scrollProgress + '%',
+        background: 'linear-gradient(to right, #ef4444, #ffffff, #ef4444)',
+        boxShadow: '0 2px 8px rgba(239, 68, 68, 0.3)',
+      }"
+    ></div>
+  </div>
+
   <nav
-    class="bg-white mx-3 sm:mx-6 lg:mx-10 my-4 sm:my-6 lg:my-8 py-3 lg:py-4 px-4 lg:px-5 rounded-2xl"
+    class="bg-white mx-3 sm:mx-6 lg:mx-10 my-4 sm:my-6 lg:my-8 py-3 lg:py-4 px-4 lg:px-5 rounded-2xl relative z-50"
   >
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
       <!-- ===== LOGO ===== -->
       <img
         src="/public/Orga.png"
         alt="OrgaAfrica Logo"
-        class="w-32 sm:w-40 lg:w-52 flex-shrink-0"
+        class="w-24 xs:w-28 sm:w-36 md:w-40 lg:w-52 object-contain"
       />
 
       <!-- ===== NAVIGATION DESKTOP ===== -->
@@ -75,7 +93,9 @@
                 type="button"
                 @click.stop="selectLanguage(lang)"
                 class="w-full px-3 py-2 text-left text-white text-sm hover:bg-white/10 transition-colors"
-                :class="lang === selectedLanguage ? 'font-semibold' : 'font-normal'"
+                :class="
+                  lang === selectedLanguage ? 'font-semibold' : 'font-normal'
+                "
                 role="option"
                 :aria-selected="lang === selectedLanguage"
               >
@@ -97,7 +117,7 @@
       <button
         type="button"
         @click.stop="toggleMobileMenu"
-        class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] cursor-pointer"
+        class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px] cursor-pointer z-50"
         aria-label="Menu"
         :aria-expanded="isMobileOpen"
       >
@@ -120,7 +140,9 @@
     <div
       @click.stop
       class="lg:hidden overflow-hidden transition-all duration-300 ease-in-out"
-      :class="isMobileOpen ? 'max-h-[500px] opacity-100 mt-3' : 'max-h-0 opacity-0'"
+      :class="
+        isMobileOpen ? 'max-h-[500px] opacity-100 mt-3' : 'max-h-0 opacity-0'
+      "
     >
       <!-- Separator -->
       <div class="border-t border-gray-200 mb-3" />
@@ -191,7 +213,9 @@
                 type="button"
                 @click.stop="selectLanguage(lang)"
                 class="w-full px-3 py-2 text-left text-black text-sm hover:bg-gray-100 transition-colors"
-                :class="lang === selectedLanguage ? 'font-semibold' : 'font-normal'"
+                :class="
+                  lang === selectedLanguage ? 'font-semibold' : 'font-normal'
+                "
                 role="option"
                 :aria-selected="lang === selectedLanguage"
               >
@@ -214,83 +238,129 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 // =====================================================
 // TYPES
 // =====================================================
 interface NavLink {
-  text: string
-  href: string
+  text: string;
+  href: string;
 }
 
-type Language = 'FR' | 'EN'
+type Language = "FR" | "EN";
 
 // =====================================================
 // CONSTANTS
 // =====================================================
-const languages: readonly Language[] = ['FR', 'EN']
+const languages: readonly Language[] = ["FR", "EN"];
 
 const navLinks: readonly NavLink[] = [
-  { text: 'Accueil', href: '#' },
-  { text: 'Nos services', href: '#' },
-  { text: 'Solution', href: '#' },
-  { text: 'Qui sommes nous ?', href: '#' },
-]
+  { text: "Accueil", href: "#accueil" },
+  { text: "Solution", href: "#solution" },
+  { text: "Nos services", href: "#nos-services" },
+  { text: "Qui sommes nous ?", href: "#qui-sommes-nous" },
+];
 
 // =====================================================
 // STATE
 // =====================================================
-const selectedLanguage = ref<Language>('FR')
-const isLanguageOpen = ref(false)
-const isMobileOpen = ref(false)
+const selectedLanguage = ref<Language>("FR");
+const isLanguageOpen = ref(false);
+const isMobileOpen = ref(false);
+const scrollProgress = ref(0);
+let ticking = ref(false);
 
 // =====================================================
 // METHODS
 // =====================================================
 const toggleLanguageMenu = () => {
-  isLanguageOpen.value = !isLanguageOpen.value
-}
+  isLanguageOpen.value = !isLanguageOpen.value;
+};
 
 const selectLanguage = (lang: Language) => {
-  selectedLanguage.value = lang
-  isLanguageOpen.value = false
-}
+  selectedLanguage.value = lang;
+  isLanguageOpen.value = false;
+};
 
 const toggleMobileMenu = () => {
-  isMobileOpen.value = !isMobileOpen.value
+  isMobileOpen.value = !isMobileOpen.value;
   // Fermer le menu langue quand on ouvre le menu mobile
   if (isMobileOpen.value) {
-    isLanguageOpen.value = false
+    isLanguageOpen.value = false;
   }
-}
+};
 
 const closeMobileMenu = () => {
-  isMobileOpen.value = false
-  isLanguageOpen.value = false
-}
+  isMobileOpen.value = false;
+  isLanguageOpen.value = false;
+};
 
 const handleClickOutside = (event: Event) => {
-  const target = event.target as HTMLElement
+  const target = event.target as HTMLElement;
   // Fermer les menus si on clique en dehors de la navbar
-  if (!target.closest('nav')) {
-    isLanguageOpen.value = false
-    isMobileOpen.value = false
+  if (!target.closest("nav")) {
+    isLanguageOpen.value = false;
+    isMobileOpen.value = false;
   }
-}
+};
+
+const updateScrollProgress = () => {
+  if (!ticking.value) {
+    window.requestAnimationFrame(() => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (docHeight > 0) {
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        scrollProgress.value = Math.min(100, Math.max(0, scrollPercent));
+      } else {
+        scrollProgress.value = 0;
+      }
+
+      ticking.value = false;
+    });
+
+    ticking.value = true;
+  }
+};
+
+// Gestion spécifique du scroll sur mobile
+const handleTouchMove = () => {
+  updateScrollProgress();
+};
 
 // =====================================================
 // LIFECYCLE HOOKS
 // =====================================================
 onMounted(() => {
-  window.addEventListener('click', handleClickOutside)
-})
+  window.addEventListener("click", handleClickOutside);
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
+  window.addEventListener("touchmove", handleTouchMove, { passive: true });
+
+  // Calcul initial
+  updateScrollProgress();
+
+  // Recalcul lors du redimensionnement
+  window.addEventListener("resize", updateScrollProgress, { passive: true });
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('click', handleClickOutside)
-})
+  window.removeEventListener("click", handleClickOutside);
+  window.removeEventListener("scroll", updateScrollProgress);
+  window.removeEventListener("touchmove", handleTouchMove);
+  window.removeEventListener("resize", updateScrollProgress);
+});
 </script>
 
 <style scoped>
-/* Optionnel : Styles supplémentaires si nécessaire */
+/* Assurer que la barre de scroll est toujours visible sur mobile */
+@media (max-width: 1024px) {
+  /* Force le recalcul du scroll sur les appareils tactiles */
+  html {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 </style>
