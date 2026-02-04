@@ -15,20 +15,22 @@
         <h1
           class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight px-2 sm:px-8 md:px-16 lg:px-40 mb-4 sm:mb-5 lg:mb-6"
         >
-          OrgaAfrica propose deux solutions formant le système d'exploitation des restaurants et
-          points de vente en Afrique.
+          OrgaAfrica propose deux solutions formant le système d'exploitation
+          des restaurants et points de vente en Afrique.
         </h1>
 
         <!-- Description -->
         <p
           class="text-base sm:text-lg lg:text-xl text-[#F1F5F9] leading-relaxed mx-auto px-2 sm:px-6 md:px-20 lg:px-60 mb-6 sm:mb-8 lg:mb-12"
         >
-          Gérez commandes, paiements, files d'attente, réservations, fidélité et croissance sur une
-          seule plateforme, pensée pour l'Afrique
+          Gérez commandes, paiements, files d'attente, réservations, fidélité et
+          croissance sur une seule plateforme, pensée pour l'Afrique
         </p>
 
         <!-- Boutons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-6">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-6"
+        >
           <button
             class="w-full sm:w-auto bg-red-500 text-white px-6 lg:px-3 py-3 lg:py-4 rounded-2xl text-base sm:text-lg lg:text-xl font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg"
           >
@@ -46,17 +48,39 @@
   </section>
 
   <div class="sm:hidden flex flex-col items-center -mt-6 px-4 gap-3">
-    <img src="/public/orgaR 1.png" alt="Orga App Left" class="w-48 object-contain" />
+    <img
+      src="/public/orgaR 1.png"
+      alt="Orga App Left"
+      class="w-48 object-contain"
+    />
     <div class="flex gap-2 justify-center">
-      <img src="/public/Frame 35.png" alt="Orga App Center" class="w-28 object-contain" />
-      <img src="/public/Frame 35.png" alt="Orga App Center" class="w-28 object-contain" />
-      <img src="/public/Frame 35.png" alt="Orga App Center" class="w-28 object-contain" />
+      <img
+        src="/public/Frame 35.png"
+        alt="Orga App Center"
+        class="w-28 object-contain"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Orga App Center"
+        class="w-28 object-contain"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Orga App Center"
+        class="w-28 object-contain"
+      />
     </div>
-    <img src="/public/orgaR2.png" alt="Orga App Right" class="w-48 object-contain" />
+    <img
+      src="/public/orgaR2.png"
+      alt="Orga App Right"
+      class="w-48 object-contain"
+    />
   </div>
 
   <!-- ══ TABLET (sm → md) : 3 colonnes avec overlap léger ══ -->
-  <div class="hidden sm:flex md:hidden justify-center items-end relative -mt-10 px-6 gap-2">
+  <div
+    class="hidden sm:flex md:hidden justify-center items-end relative -mt-10 px-6 gap-2"
+  >
     <!-- Left -->
     <div class="relative z-10">
       <img
@@ -94,7 +118,9 @@
   </div>
 
   <!-- ══ TABLET grand (md → lg) : plus d'espace, overlap plus prononcé ══ -->
-  <div class="hidden md:flex lg:hidden justify-center items-end relative -mt-16 px-4 gap-0">
+  <div
+    class="hidden md:flex lg:hidden justify-center items-end relative -mt-16 px-4 gap-0"
+  >
     <!-- Left -->
     <div class="relative z-10">
       <img
@@ -137,7 +163,11 @@
   >
     <!-- Left Phone -->
     <div class="relative z-10">
-      <img src="/public/orgaR 1.png" alt="Orga App Left" class="translate-x-14" />
+      <img
+        src="/public/orgaR 1.png"
+        alt="Orga App Left"
+        class="translate-x-14"
+      />
     </div>
 
     <!-- Center (3 frames) -->
@@ -167,7 +197,11 @@
 
     <!-- Right Phone -->
     <div>
-      <img src="/public/orgaR2.png" alt="Orga App Right" class="-translate-x-18 -translate-y-10" />
+      <img
+        src="/public/orgaR2.png"
+        alt="Orga App Right"
+        class="-translate-x-18 -translate-y-10"
+      />
     </div>
   </div>
 </template>
