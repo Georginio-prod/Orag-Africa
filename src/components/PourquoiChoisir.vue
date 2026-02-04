@@ -10,10 +10,13 @@
               <img src="/public/Clip path group.png" alt="" />
             </div>
             <div class="flex-1 pt-4">
-              <h2 class="text-3xl font-bold mb-4">Une plateforme de classe mondiale</h2>
+              <h2 class="text-3xl font-bold mb-4">
+                Une plateforme de classe mondiale
+              </h2>
               <p class="text-gray-300 leading-relaxed text-lg">
-                Nous croyons que les entreprises africaines méritent des outils puissants, fiables
-                et modernes, au même niveau que les meilleures solutions internationales.
+                Nous croyons que les entreprises africaines méritent des outils
+                puissants, fiables et modernes, au même niveau que les
+                meilleures solutions internationales.
               </p>
             </div>
           </div>
@@ -21,10 +24,13 @@
           <div class="flex gap-8 items-start">
             <div class="grid grid-cols-2 gap-4">
               <div>
-                <h2 class="text-3xl font-bold mb-4">Conçu pour la croissance</h2>
+                <h2 class="text-3xl font-bold mb-4">
+                  Conçu pour la croissance
+                </h2>
                 <p class="text-gray-300 leading-relaxed text-lg">
-                  Structuration, données, efficacité opérationnelle et nouvelles sources de revenus
-                  : OrgaAfrica accompagne les restaurants dans leur montée en puissance.
+                  Structuration, données, efficacité opérationnelle et nouvelles
+                  sources de revenus : OrgaAfrica accompagne les restaurants
+                  dans leur montée en puissance.
                 </p>
               </div>
               <div>
@@ -40,10 +46,12 @@
               <img src="/public/Vector.png" alt="" />
             </div>
             <div class="flex-1 pt-8">
-              <h2 class="text-3xl font-bold mb-4">Une technologie qui comprend l'Afrique</h2>
+              <h2 class="text-3xl font-bold mb-4">
+                Une technologie qui comprend l'Afrique
+              </h2>
               <p class="text-gray-300 leading-relaxed text-lg">
-                OrgaAfrica est pensé pour les réalités africaines : Mobile Money, cash, connectivité
-                variable et usages locaux.
+                OrgaAfrica est pensé pour les réalités africaines : Mobile
+                Money, cash, connectivité variable et usages locaux.
               </p>
             </div>
           </div>
@@ -55,8 +63,9 @@
             <div class="flex-1 pt-4">
               <h2 class="text-3xl font-bold mb-4">Pas une app de livraison</h2>
               <p class="text-gray-300 leading-relaxed text-lg">
-                Nous ne livrons pas de nourriture. Nous construisons l'infrastructure qui permet aux
-                restaurants de mieux fonctionner, au quotidien.
+                Nous ne livrons pas de nourriture. Nous construisons
+                l'infrastructure qui permet aux restaurants de mieux
+                fonctionner, au quotidien.
               </p>
             </div>
           </div>

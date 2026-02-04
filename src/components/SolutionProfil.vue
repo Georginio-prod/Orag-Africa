@@ -1,27 +1,29 @@
 <script setup lang="ts">
 interface ProfileSolution {
-  title: string
-  description: string
-  inlineText: boolean
+  title: string;
+  description: string;
+  inlineText: boolean;
 }
 
 const profileSolutions: ProfileSolution[] = [
   {
-    title: 'Pour les restaurants :',
-    description: "Augmentez vos revenus, réduisez l'attente et reprenez le contrôle.",
+    title: "Pour les restaurants :",
+    description:
+      "Augmentez vos revenus, réduisez l'attente et reprenez le contrôle.",
     inlineText: true,
   },
   {
-    title: 'Pour les vendeurs & commerçants informels :',
-    description: 'Passez au digital sans matériel ni complexité.',
+    title: "Pour les vendeurs & commerçants informels :",
+    description: "Passez au digital sans matériel ni complexité.",
     inlineText: false,
   },
   {
-    title: 'Pour les entreprises :',
-    description: 'Offrez des avantages repas intelligents et maîtrisez les dépenses.',
+    title: "Pour les entreprises :",
+    description:
+      "Offrez des avantages repas intelligents et maîtrisez les dépenses.",
     inlineText: false,
   },
-]
+];
 </script>
 
 <template>
@@ -31,7 +33,11 @@ const profileSolutions: ProfileSolution[] = [
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center z-10">
         <div class="bg-[#FC0A02] rounded-4xl">
-          <img src="/public/Rectangle 4221.png" alt="" class="w-full h-full object-cover" />
+          <img
+            src="/public/Rectangle 4221.png"
+            alt=""
+            class="w-full h-full object-cover"
+          />
         </div>
 
         <div class="space-y-6 z-10">
@@ -42,17 +48,24 @@ const profileSolutions: ProfileSolution[] = [
           >
             <div class="flex items-start gap-4">
               <div v-if="profile.inlineText">
-                <div class="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center">
+                <div
+                  class="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center"
+                >
                   <img src="/public/award.png" alt="" />
                 </div>
               </div>
-              <div v-else class="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center">
+              <div
+                v-else
+                class="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center"
+              >
                 <img src="/public/award.png" alt="" />
               </div>
 
               <div v-if="profile.inlineText">
                 <h3 class="text-xl font-bold mb-2">{{ profile.title }}</h3>
-                <p class="text-base leading-relaxed">{{ profile.description }}</p>
+                <p class="text-base leading-relaxed">
+                  {{ profile.description }}
+                </p>
               </div>
               <div v-if="!profile.inlineText">
                 <h3 class="text-xl font-bold mb-2">{{ profile.title }}</h3>
@@ -68,11 +81,11 @@ const profileSolutions: ProfileSolution[] = [
           </button>
         </div>
       </div>
-      <img
+      <!-- <img
         src="/public/Group 2.png"
         alt=""
         class="absolute right-0 top-1/2 translate-y-1/4 translate-x-4/4 z-0 max-w-[16%]"
-      />
+      /> -->
     </div>
   </div>
 </template>
