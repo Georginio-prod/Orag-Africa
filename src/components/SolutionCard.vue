@@ -1,10 +1,10 @@
 <script setup lang="ts">
 interface SolutionCardProps {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-defineProps<SolutionCardProps>()
+defineProps<SolutionCardProps>();
 </script>
 
 <template>
@@ -17,11 +17,11 @@ defineProps<SolutionCardProps>()
         alt="check"
         class="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 mt-0.5 sm:mt-1"
       />
-      <h3 class="text-sm sm:text-base font-semibold text-white">
+      <h3 class="text-lg lg:text-xl font-semibold text-white">
         {{ title }}
       </h3>
     </div>
-    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed">
+    <p class="text-gray-400 text-base lg:text-lg leading-relaxed">
       {{ description }}
     </p>
   </div>
