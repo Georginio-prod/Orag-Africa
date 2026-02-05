@@ -49,32 +49,29 @@
 
   <div class="sm:hidden flex flex-col items-center -mt-6 px-4 gap-3">
     <img
-      src="/public/orgaR 1.png"
+      src="/public/Rectangle 4221.png"
       alt="Orga App Left"
       class="w-48 object-contain"
     />
-    <div class="flex gap-2 justify-center">
+    <div class="grid grid-cols-2 gap-2 justify-center">
       <img
-        src="/public/Frame 35.png"
+        src="/public/Frame 33.png"
         alt="Orga App Center"
         class="w-28 object-contain"
       />
       <img
-        src="/public/Frame 35.png"
-        alt="Orga App Center"
-        class="w-28 object-contain"
-      />
-      <img
-        src="/public/Frame 35.png"
+        src="/public/Frame 33.png"
         alt="Orga App Center"
         class="w-28 object-contain"
       />
     </div>
-    <img
-      src="/public/orgaR2.png"
-      alt="Orga App Right"
-      class="w-48 object-contain"
-    />
+    <div>
+      <img
+        src="/public/Frame 33.png"
+        alt="Orga App Center"
+        class="w-28 object-contain"
+      />
+    </div>
   </div>
 
   <!-- ══ TABLET (sm → md) : 3 colonnes avec overlap léger ══ -->

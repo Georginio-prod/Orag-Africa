@@ -62,12 +62,12 @@
       </div>
 
       <!-- mobile -->
-      <div class="w-full flex lg:hidden justify-center lg:justify-end">
-        <div class="relative object-cover">
+      <div class="w-full flex lg:hidden justify-center items-center">
+        <div class="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
           <img
             src="/public/E1.png"
             alt="Mockup de l'application mobile"
-            class="w-full h-auto object-contain lg:-translate-y-12 xl:-translate-y-16"
+            class="w-64 h-64 object-contain mx-auto"
           />
         </div>
       </div>
