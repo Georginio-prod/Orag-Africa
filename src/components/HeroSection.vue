@@ -32,6 +32,7 @@
           class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 lg:gap-6"
         >
           <button
+            @click="openDemo"
             class="w-full sm:w-auto bg-red-500 text-white px-6 lg:px-3 py-3 lg:py-4 rounded-2xl text-base sm:text-lg lg:text-xl font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg"
           >
             Demander une démo
@@ -202,4 +203,8 @@
     </div>
   </div>
 </template>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const openDemo = () => {
+  window.open("/demo", "_blank");
+};
+</script>

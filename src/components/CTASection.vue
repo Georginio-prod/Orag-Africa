@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import StoreButtons from "./StoreButtons.vue";
+
+const openDemo = () => {
+  window.open("/demo", "_blank");
+};
 </script>
 
 <template>
@@ -34,6 +38,7 @@ import StoreButtons from "./StoreButtons.vue";
             />
             <div>
               <button
+                @click="openDemo"
                 class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Demander une démo
