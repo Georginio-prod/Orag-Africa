@@ -77,128 +77,126 @@
 
   <!-- ══ TABLET (sm → md) : 3 colonnes avec overlap léger ══ -->
   <div
-    class="hidden sm:flex md:hidden justify-center items-end relative -mt-10 px-6 gap-2"
-  >
-    <!-- Left -->
-    <div class="relative z-10">
-      <img
-        src="/public/orgaR 1.png"
-        alt="Orga App Left"
-        class="w-52 object-contain translate-x-6"
-      />
-    </div>
-    <!-- Center (3 frames superposées) -->
-    <div class="relative z-20 flex">
-      <img
-        src="/public/Frame 35.png"
-        alt="Orga App Center"
-        class="w-44 object-contain -translate-y-16 translate-x-8"
-      />
-      <img
-        src="/public/Frame 35.png"
-        alt="Orga App Center"
-        class="w-44 object-contain -translate-y-4 -translate-x-2"
-      />
-      <img
-        src="/public/Frame 35.png"
-        alt="Orga App Center"
-        class="w-44 object-contain -translate-y-12 -translate-x-6"
-      />
-    </div>
-    <!-- Right -->
-    <div>
-      <img
-        src="/public/orgaR2.png"
-        alt="Orga App Right"
-        class="w-52 object-contain -translate-x-8 -translate-y-6"
-      />
-    </div>
-  </div>
-
-  <!-- ══ TABLET grand (md → lg) : plus d'espace, overlap plus prononcé ══ -->
-  <div
-    class="hidden md:flex lg:hidden justify-center items-end relative -mt-16 px-4 gap-0"
-  >
-    <!-- Left -->
-    <div class="relative z-10">
-      <img
-        src="/public/orgaR 1.png"
-        alt="Orga App Left"
-        class="w-64 object-contain translate-x-10"
-      />
-    </div>
-    <!-- Center -->
-    <div class="absolute flex z-20">
-      <img
-        src="/public/Frame 35.png"
-        alt="Orga App Center"
-        class="w-56 object-contain -translate-y-24 translate-x-14"
-      />
-      <img
-        src="/public/Frame 35.png"
-        alt="Orga App Center"
-        class="w-56 object-contain -translate-y-6 -translate-x-3"
-      />
-      <img
-        src="/public/Frame 35.png"
-        alt="Orga App Center"
-        class="w-56 object-contain -translate-y-20 -translate-x-8"
-      />
-    </div>
-    <!-- Right -->
-    <div>
-      <img
-        src="/public/orgaR2.png"
-        alt="Orga App Right"
-        class="w-64 object-contain -translate-x-14 -translate-y-8"
-      />
-    </div>
-  </div>
-
-  <!-- ══ GRAND ÉCRAN (≥lg) : layout exact de référence ══ -->
-  <div
-    class="hidden lg:flex justify-center items-end relative -mt-[26%] lg:-mt-[16%] md:-mt-[10%] px-1 gap-0"
+    class="hidden sm:flex md:hidden justify-center items-end relative -mt-8 px-4"
   >
     <!-- Left Phone -->
     <div class="relative z-10">
       <img
         src="/public/orgaR 1.png"
         alt="Orga App Left"
-        class="translate-x-14"
+        class="w-48 object-contain"
       />
     </div>
 
     <!-- Center (3 frames) -->
-    <div class="absolute flex z-20">
-      <div>
-        <img
-          src="/public/Frame 35.png"
-          alt="Orga App Center"
-          class="relative -translate-y-[91.6%] translate-x-[75%]"
-        />
-      </div>
-      <div>
-        <img
-          src="/public/Frame 35.png"
-          alt="Orga App Center"
-          class="relative -translate-y-[16.6%] -translate-x-[16.6%]"
-        />
-      </div>
-      <div>
-        <img
-          src="/public/Frame 35.png"
-          alt="Orga App Center"
-          class="relative -translate-y-[75%] -translate-x-[41.6%]"
-        />
-      </div>
+    <div class="absolute z-20 flex flex-col gap-3 -translate-x-2">
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 1"
+        class="w-36 object-contain translate-y-2 translate-x-12"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 2"
+        class="w-36 object-contain translate-x-6"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 3"
+        class="w-36 object-contain -translate-y-2"
+      />
     </div>
 
     <!-- Right Phone -->
-    <div>
+    <div class="relative z-10 -ml-8">
       <img
         src="/public/orgaR2.png"
         alt="Orga App Right"
-        class="-translate-x-18 -translate-y-10"
+        class="w-48 object-contain"
+      />
+    </div>
+  </div>
+
+  <!-- ══ TABLET grand (md → lg) : plus d'espace, overlap plus prononcé ══ -->
+  <div
+    class="hidden md:flex lg:hidden justify-center items-center relative -mt-12 px-4"
+  >
+    <!-- Left Phone -->
+    <div class="relative z-10">
+      <img
+        src="/public/orgaR 1.png"
+        alt="Orga App Left"
+        class="w-56 object-contain"
+      />
+    </div>
+
+    <!-- Center (3 frames stacked) -->
+    <div class="absolute z-20 flex flex-col gap-4">
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 1"
+        class="w-44 object-contain translate-y-4 translate-x-16"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 2"
+        class="w-44 object-contain translate-x-8"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 3"
+        class="w-44 object-contain -translate-y-4"
+      />
+    </div>
+
+    <!-- Right Phone -->
+    <div class="relative z-10 -ml-12">
+      <img
+        src="/public/orgaR2.png"
+        alt="Orga App Right"
+        class="w-56 object-contain"
+      />
+    </div>
+  </div>
+
+  <!-- ══ GRAND ÉCRAN (≥lg) : layout exact de référence ══ -->
+  <div
+    class="hidden lg:flex justify-center items-center relative -mt-20 xl:-mt-24 px-4 gap-96"
+  >
+    <!-- Left Phone -->
+    <div class="relative z-10">
+      <img
+        src="/public/orgaR 1.png"
+        alt="Orga App Left"
+        class="w-64 xl:w-10/12 object-contain transform -translate-y-16 -translate-x-8"
+      />
+    </div>
+
+    <!-- Center (3 frames stacked vertically) -->
+    <div class="absolute z-20 flex flex-col gap-5 xl:gap-6">
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 1"
+        class="w-48 xl:w-64 object-contain translate-y-8 -translate-x-72"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 2"
+        class="w-48 xl:w-64 object-contain translate-x-64"
+      />
+      <img
+        src="/public/Frame 35.png"
+        alt="Stats Card 3"
+        class="w-48 xl:w-64 object-contain -translate-y-8 -translate-x-48"
+      />
+    </div>
+
+    <!-- Right Phone -->
+    <div class="relative z-10 -ml-16 xl:-ml-20">
+      <img
+        src="/public/orgaR2.png"
+        alt="Orga App Right"
+        class="w-64 xl:w-10/12 object-contain -translate-y-16 translate-x-14"
       />
     </div>
   </div>
