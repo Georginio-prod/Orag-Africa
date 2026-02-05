@@ -32,7 +32,7 @@
               {{ module.title }}
             </h2>
 
-            <p class="text-gray-400 text-xs sm:text-sm lg:text-lg mb-3 sm:mb-4">
+            <p class="text-gray-400 text-base lg:text-lg mb-3 sm:mb-4">
               {{ module.description }}
             </p>
 
@@ -40,7 +40,7 @@
               <li
                 v-for="item in module.items"
                 :key="item"
-                class="flex items-start text-xs sm:text-sm lg:text-md"
+                class="flex items-start text-md lg:text-base"
               >
                 <span class="text-gray-400 mr-2 sm:mr-3">•</span>
                 <span>{{ item }}</span>

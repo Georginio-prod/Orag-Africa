@@ -22,7 +22,7 @@ const faqItems = ref<FAQItem[]>([
     question: "Qu'est ce que  Orga/Orga pro ?",
     answer:
       "Orga/Orga pro est une application mobile , une POS qui aide les commercant qu'il soit dans le formel ou  t'informel, à gérer de manière efficace  la clientèle et  la ventes",
-    isOpen: true,
+    isOpen: false,
   },
   {
     id: 2,
@@ -112,18 +112,18 @@ const handleSubmit = () => {
     </div>
 
     <div class="max-w-7xl mx-auto relative z-10">
-      <div class="bg-white rounded-lg shadow-2xl overflow-hidden">
+      <div class="bg-black rounded-lg shadow-2xl overflow-hidden">
         <div class="px-6 py-12 sm:px-12 lg:px-16">
           <div class="text-center mb-12">
-            <p class="text-sm text-gray-500 mb-2">Contactez nous</p>
+            <p class="text-sm text-gray-400 mb-2">Contactez nous</p>
             <h1
-              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4"
             >
               Vous avez des questions ? Notre équipe est prête<br
                 class="hidden sm:block"
               />à vous aider
             </h1>
-            <p class="text-gray-600 text-lg">
+            <p class="text-gray-300 text-lg">
               Contactez-nous par email, téléphone ou via le formulaire
               ci-dessous.
             </p>
@@ -136,7 +136,7 @@ const handleSubmit = () => {
                   <div>
                     <label
                       for="fullName"
-                      class="block text-sm font-medium text-gray-900 mb-2"
+                      class="block text-sm font-medium text-white mb-2"
                     >
                       Nom Complet
                     </label>
@@ -145,14 +145,14 @@ const handleSubmit = () => {
                       v-model="formData.fullName"
                       type="text"
                       placeholder="Jonh DOE"
-                      class="w-full px-4 py-3 border-2 border-red-400 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all"
+                      class="w-full px-4 py-3 bg-gray-800 text-white border-2 border-red-400 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 transition-all placeholder:text-gray-400"
                     />
                   </div>
 
                   <div>
                     <label
                       for="email"
-                      class="block text-sm font-medium text-gray-900 mb-2"
+                      class="block text-sm font-medium text-white mb-2"
                     >
                       Email
                     </label>
@@ -161,7 +161,7 @@ const handleSubmit = () => {
                       v-model="formData.email"
                       type="email"
                       placeholder="exemple@exemple.com"
-                      class="w-full px-4 py-3 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-all"
+                      class="w-full px-4 py-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-gray-700 transition-all placeholder:text-gray-400"
                     />
                   </div>
                 </div>
@@ -169,7 +169,7 @@ const handleSubmit = () => {
                 <div>
                   <label
                     for="companyName"
-                    class="block text-sm font-medium text-gray-900 mb-2"
+                    class="block text-sm font-medium text-white mb-2"
                   >
                     Nom de votre structure
                   </label>
@@ -178,14 +178,14 @@ const handleSubmit = () => {
                     v-model="formData.companyName"
                     type="text"
                     placeholder="Elite Burger"
-                    class="w-full px-4 py-3 bg-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-all"
+                    class="w-full px-4 py-3 bg-gray-800 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-gray-700 transition-all placeholder:text-gray-400"
                   />
                 </div>
 
                 <div>
                   <label
                     for="message"
-                    class="block text-sm font-medium text-gray-900 mb-2"
+                    class="block text-sm font-medium text-white mb-2"
                   >
                     Message
                   </label>
@@ -194,7 +194,7 @@ const handleSubmit = () => {
                     v-model="formData.message"
                     rows="5"
                     placeholder="Message"
-                    class="w-full px-4 py-3 bg-gray-200 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-white transition-all"
+                    class="w-full px-4 py-3 bg-gray-800 text-white rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-red-500 focus:bg-gray-700 transition-all placeholder:text-gray-400"
                   ></textarea>
                 </div>
 
@@ -203,16 +203,16 @@ const handleSubmit = () => {
                     id="acceptEmail"
                     v-model="formData.acceptEmail"
                     type="checkbox"
-                    class="mt-1 h-4 w-4 border-2 border-gray-400 rounded focus:ring-2 focus:ring-red-500"
+                    class="mt-1 h-4 w-4 border-2 border-gray-400 rounded focus:ring-2 focus:ring-red-500 accent-red-500"
                   />
-                  <label for="acceptEmail" class="ml-3 text-sm text-gray-700">
-                    j'accepte recevoir le mai en retour
+                  <label for="acceptEmail" class="ml-3 text-sm text-gray-300">
+                    j'accepte recevoir le mail en retour
                   </label>
                 </div>
 
                 <button
                   type="submit"
-                  class="w-full bg-black text-white py-4 px-6 rounded-md hover:bg-gray-800 transition-colors duration-200 font-medium text-lg"
+                  class="w-full bg-red-600 text-white py-4 px-6 rounded-md hover:bg-red-700 transition-colors duration-200 font-medium text-lg"
                 >
                   Demander une démo
                 </button>
@@ -220,7 +220,7 @@ const handleSubmit = () => {
             </div>
 
             <div>
-              <h2 class="text-2xl font-bold text-gray-900 mb-6">
+              <h2 class="text-2xl font-bold text-white mb-6">
                 Questions Fréquentes (FAQ)
               </h2>
               <div class="space-y-4">
@@ -228,17 +228,17 @@ const handleSubmit = () => {
                   v-for="item in faqItems"
                   :key="item.id"
                   class="border-2 rounded-lg overflow-hidden transition-all duration-200"
-                  :class="item.isOpen ? 'border-red-400' : 'border-gray-200'"
+                  :class="item.isOpen ? 'border-red-400' : 'border-gray-700'"
                 >
                   <button
                     @click="toggleFAQ(item.id)"
-                    class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                    class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-800 transition-colors"
                   >
-                    <span class="font-medium text-gray-900">{{
+                    <span class="font-medium text-white">{{
                       item.question
                     }}</span>
                     <svg
-                      class="w-6 h-6 text-gray-600 transition-transform duration-200"
+                      class="w-6 h-6 text-gray-400 transition-transform duration-200"
                       :class="{ 'rotate-45': item.isOpen }"
                       fill="none"
                       stroke="currentColor"
@@ -254,9 +254,9 @@ const handleSubmit = () => {
                   </button>
                   <div
                     v-if="item.isOpen"
-                    class="px-6 py-4 bg-white border-t-2 border-gray-100"
+                    class="px-6 py-4 bg-gray-900 border-t-2 border-gray-800"
                   >
-                    <p class="text-gray-700 leading-relaxed">
+                    <p class="text-gray-300 leading-relaxed">
                       {{ item.answer }}
                     </p>
                   </div>
@@ -265,8 +265,8 @@ const handleSubmit = () => {
             </div>
           </div>
 
-          <div class="border-t-2 border-gray-100 pt-12">
-            <h2 class="text-2xl font-bold text-gray-900 mb-8">
+          <div class="border-t-2 border-gray-800 pt-12">
+            <h2 class="text-2xl font-bold text-white mb-8">
               Vous pouvez nous contacter Via
             </h2>
             <div
@@ -275,7 +275,7 @@ const handleSubmit = () => {
               <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
                   <svg
-                    class="w-8 h-8 text-gray-700"
+                    class="w-8 h-8 text-red-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -289,16 +289,14 @@ const handleSubmit = () => {
                   </svg>
                 </div>
                 <div>
-                  <p class="text-gray-900 font-medium">
-                    mailorgaafrica@gmail.com
-                  </p>
+                  <p class="text-white font-medium">mailorgaafrica@gmail.com</p>
                 </div>
               </div>
 
               <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
                   <svg
-                    class="w-8 h-8 text-gray-700"
+                    class="w-8 h-8 text-red-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -312,7 +310,7 @@ const handleSubmit = () => {
                   </svg>
                 </div>
                 <div>
-                  <p class="text-gray-900 font-medium">
+                  <p class="text-white font-medium">
                     +228 98 89 87 77 / 90 00 01 10
                   </p>
                 </div>
@@ -321,7 +319,7 @@ const handleSubmit = () => {
               <div class="flex items-center space-x-4">
                 <div class="flex-shrink-0">
                   <svg
-                    class="w-8 h-8 text-gray-700"
+                    class="w-8 h-8 text-red-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -335,8 +333,8 @@ const handleSubmit = () => {
                   </svg>
                 </div>
                 <div>
-                  <p class="text-gray-900 font-medium">Localisation</p>
-                  <p class="text-gray-600 text-sm">Agoé Avédji, Lomé TOGO</p>
+                  <p class="text-white font-medium">Localisation</p>
+                  <p class="text-gray-400 text-sm">Agoé Avédji, Lomé TOGO</p>
                 </div>
               </div>
             </div>
@@ -344,30 +342,30 @@ const handleSubmit = () => {
         </div>
 
         <div
-          class="bg-white border-t-2 border-gray-100 px-6 py-6 sm:px-12 lg:px-16"
+          class="bg-gray-900 border-t-2 border-gray-800 px-6 py-6 sm:px-12 lg:px-16"
         >
           <div
             class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0"
           >
-            <p class="text-sm text-gray-600">
+            <p class="text-sm text-gray-400">
               © 2026 OrgaAfrica. Tous droits réservés.
             </p>
             <div class="flex space-x-6">
               <a
                 href="#"
-                class="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium"
+                class="text-gray-400 hover:text-red-500 transition-colors text-sm font-medium"
               >
                 LinkedIn
               </a>
               <a
                 href="#"
-                class="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium"
+                class="text-gray-400 hover:text-red-500 transition-colors text-sm font-medium"
               >
                 Instagram
               </a>
               <a
                 href="#"
-                class="text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium"
+                class="text-gray-400 hover:text-red-500 transition-colors text-sm font-medium"
               >
                 Facebook
               </a>
