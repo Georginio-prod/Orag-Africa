@@ -67,13 +67,15 @@ const profileSolutions: ProfileSolution[] = [
 
               <div v-if="profile.inlineText">
                 <h3 class="text-xl font-bold mb-2">{{ profile.title }}</h3>
-                <p class="text-base leading-relaxed">
+                <p class="text-base leading-relaxed text-gray-400">
                   {{ profile.description }}
                 </p>
               </div>
               <div v-if="!profile.inlineText">
                 <h3 class="text-xl font-bold mb-2">{{ profile.title }}</h3>
-                <p class="leading-relaxed">{{ profile.description }}</p>
+                <p class="text-base leading-relaxed text-gray-400">
+                  {{ profile.description }}
+                </p>
               </div>
             </div>
           </div>
