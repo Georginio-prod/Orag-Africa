@@ -15,7 +15,10 @@
       </div>
     </a>
     <a
-      href="#"
+      href="https://play.google.com/store/apps/details?id=com.africa.orga"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Télécharger OrgaAfrica sur Google Play"
       class="inline-flex items-center justify-center px-4 sm:px-6 py-3 bg-black border border-white rounded-xl hover:bg-white hover:text-black transition-colors duration-300"
     >
       <svg class="w-6 h-6 sm:w-7 sm:h-7 mr-3" viewBox="0 0 24 24">

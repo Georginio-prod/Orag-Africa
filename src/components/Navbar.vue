@@ -239,6 +239,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
+import { useLanguage, type Language } from "../composables/useLanguage";
 
 // =====================================================
 // TYPES
@@ -247,8 +248,6 @@ interface NavLink {
   text: string;
   href: string;
 }
-
-type Language = "FR" | "EN";
 
 // =====================================================
 // CONSTANTS
@@ -265,7 +264,9 @@ const navLinks: readonly NavLink[] = [
 // =====================================================
 // STATE
 // =====================================================
-const selectedLanguage = ref<Language>("FR");
+// Langue partagée globalement : le sélecteur pilote la traduction
+// de toute l'app (Témoignages, etc.) via le composable useLanguage.
+const { currentLang: selectedLanguage, setLanguage } = useLanguage();
 const isLanguageOpen = ref(false);
 const isMobileOpen = ref(false);
 const scrollProgress = ref(0);
@@ -279,7 +280,7 @@ const toggleLanguageMenu = () => {
 };
 
 const selectLanguage = (lang: Language) => {
-  selectedLanguage.value = lang;
+  setLanguage(lang);
   isLanguageOpen.value = false;
 };
 
