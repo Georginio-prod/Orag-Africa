@@ -25,15 +25,15 @@ const copy = {
   eyebrow: { fr: "Ils nous font confiance", en: "They trust us" },
   title: { fr: "Témoignages", en: "Testimonials" },
   subtitle: {
-    fr: "Des restaurateurs de toute l'Afrique gèrent leurs paiements, leurs commandes et leur croissance avec OrgaAfrica.",
-    en: "Restaurant owners across Africa run their payments, orders and growth with OrgaAfrica.",
+    fr: "Des restaurateurs du Togo gèrent leurs paiements, leurs commandes et leur croissance avec OrgaAfrica.",
+    en: "Restaurant owners across Togo run their payments, orders and growth with OrgaAfrica.",
   },
 };
 
 const stats: { value: Localized; label: Localized }[] = [
   {
-    value: { fr: "120+", en: "120+" },
-    label: { fr: "Restaurants équipés", en: "Restaurants onboard" },
+    value: { fr: "30+", en: "30+" },
+    label: { fr: "Restaurants partenaires", en: "Partner restaurants" },
   },
   {
     value: { fr: "4,8/5", en: "4.8/5" },
@@ -52,27 +52,27 @@ const stats: { value: Localized; label: Localized }[] = [
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Aïcha Koné",
+    name: "Ama Adjoyi",
     role: {
-      fr: "Gérante · Le Baobab, Abidjan",
-      en: "Manager · Le Baobab, Abidjan",
+      fr: "Gérante · Chez Mama Béatrice, Lomé",
+      en: "Manager · Chez Mama Béatrice, Lomé",
     },
-    initials: "AK",
+    initials: "AA",
     accent: "from-red-500 to-orange-500",
     text: {
-      fr: "Avec le Mobile Money et les cartes intégrés à la caisse, mes comptes tombent juste chaque soir. Fini les écarts et les paiements introuvables.",
-      en: "With Mobile Money and cards built into the till, my accounts balance every night. No more gaps or untraceable payments.",
+      fr: "Avec Flooz et T-Money intégrés à la caisse, mes comptes tombent juste chaque soir. Fini les écarts et les paiements introuvables.",
+      en: "With Flooz and T-Money built into the till, my accounts balance every night. No more gaps or untraceable payments.",
     },
     rating: 5,
   },
   {
     id: 2,
-    name: "Kwame Mensah",
+    name: "Kossi Amouzou",
     role: {
-      fr: "Propriétaire · Chop House, Accra",
-      en: "Owner · Chop House, Accra",
+      fr: "Propriétaire · Le Terminus, Kara",
+      en: "Owner · Le Terminus, Kara",
     },
-    initials: "KM",
+    initials: "KA",
     accent: "from-rose-500 to-red-600",
     text: {
       fr: "Les files d'attente ont disparu. Les clients commandent par QR code et nous servons presque deux fois plus de couverts le midi.",
@@ -82,27 +82,27 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Fatou Diop",
+    name: "Afi Mensah",
     role: {
-      fr: "Responsable de salle · Teranga Café, Dakar",
-      en: "Floor manager · Teranga Café, Dakar",
+      fr: "Responsable de salle · Le Palmier, Lomé",
+      en: "Floor manager · Le Palmier, Lomé",
     },
-    initials: "FD",
+    initials: "AM",
     accent: "from-amber-500 to-red-500",
     text: {
       fr: "Le POS continue de tourner même quand la connexion coupe. Depuis qu'on utilise OrgaAfrica, on n'a plus jamais perdu une commande.",
       en: "The POS keeps running even when the connection drops. Since we started using OrgaAfrica, we've never lost an order.",
     },
-    rating: 5,
+    rating: 4,
   },
   {
     id: 4,
-    name: "Emeka Okafor",
+    name: "Komla Dossou",
     role: {
-      fr: "Fondateur · Naija Grill, Lagos",
-      en: "Founder · Naija Grill, Lagos",
+      fr: "Fondateur · Braise & Saveurs, Sokodé",
+      en: "Founder · Braise & Saveurs, Sokodé",
     },
-    initials: "EO",
+    initials: "KD",
     accent: "from-red-600 to-pink-600",
     text: {
       fr: "Les tableaux de bord m'ont permis d'obtenir un financement : la banque avait enfin des chiffres fiables sur mon activité.",
@@ -112,27 +112,27 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 5,
-    name: "Mariam Traoré",
+    name: "Adjo Lawson",
     role: {
-      fr: "Gérante · Maquis du Fleuve, Bamako",
-      en: "Manager · Maquis du Fleuve, Bamako",
+      fr: "Gérante · Le Flamboyant, Kpalimé",
+      en: "Manager · Le Flamboyant, Kpalimé",
     },
-    initials: "MT",
+    initials: "AL",
     accent: "from-orange-500 to-red-600",
     text: {
-      fr: "Je pilote mes deux restaurants depuis mon téléphone. Je vois les ventes en temps réel, même quand je ne suis pas sur place.",
-      en: "I run both my restaurants from my phone. I see sales in real time, even when I'm not on site.",
+      fr: "L'appli m'aide vraiment à suivre mes ventes à distance. La formation de l'équipe a pris quelques jours, mais aujourd'hui on ne reviendrait pas en arrière.",
+      en: "The app really helps me track sales remotely. Training the team took a few days, but today we wouldn't go back.",
     },
-    rating: 4,
+    rating: 3,
   },
   {
     id: 6,
-    name: "Yao N'Guessan",
+    name: "Yao Agbeko",
     role: {
-      fr: "Chef d'équipe · Le Kedjenou, Cotonou",
-      en: "Team lead · Le Kedjenou, Cotonou",
+      fr: "Chef d'équipe · Grillades du Golfe, Atakpamé",
+      en: "Team lead · Grillades du Golfe, Atakpamé",
     },
-    initials: "YN",
+    initials: "YA",
     accent: "from-red-500 to-rose-600",
     text: {
       fr: "Moins d'erreurs de commande, un service plus fluide, des serveurs moins stressés. L'équipe a adopté l'outil dès le premier jour.",
